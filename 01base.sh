@@ -48,14 +48,6 @@ grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=arch
 grub-mkconfig -o /boot/grub/grub.cfg
 systemctl enable NetworkManager.service
 
-
-
-echo "Done. Now..." 
-echo "exit"
-echo "umount -vR /mnt"
-echo "reboot"
-echo
-
 ## OUTPUT
 echo "This are your changes..."
 echo "-----------------------"
@@ -66,5 +58,11 @@ echo
 hostnamectl
 echo
 cat /etc/hosts
+echo
+
+echo "Done. Now..." 
+echo "exit"
+echo "umount -vR /mnt"
+echo "reboot"
 echo
 
