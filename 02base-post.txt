@@ -10,8 +10,8 @@ sudo systemctl enable cups.service
 sudo systemctl enable firewalld.service
 
 git clone https://aur.archlinux.org/yay.git
-bash yay/makepkg -si
+#bash yay/makepkg -si
+sh -c "cd yay && makepkg -si"
 
 echo 'alias ll="ls -lhs"' | sudo tee -a /etc/bash.bashrc
-
-
+source /etc/bash.bashrc
